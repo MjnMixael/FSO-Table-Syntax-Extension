@@ -1,0 +1,66 @@
+{
+  "name": "fso-table-syntax",
+  "displayName": "FreespaceOpen Table Syntax",
+  "description": "Syntax highlighting for FreespaceOpen table and mission files",
+  "version": "0.0.1",
+  "engines": {
+    "vscode": "^1.96.0"
+  },
+  "categories": [
+    "Programming Languages"
+  ],
+  "contributes": {
+    "languages": [
+      {
+        "id": "freespaceopen",
+        "aliases": ["FreespaceOpen", "freespaceopen"],
+        "extensions": [".tbl", ".tbm", ".fc2", ".fs2"],
+        "configuration": "./language-configuration.json",
+        "icon": {
+          "light": "resources/fso_syntax_icon.png",
+          "dark": "resources/fso_syntax_icon.png"
+        }
+      }
+    ],
+    "grammars": [
+      {
+        "language": "freespaceopen",
+        "scopeName": "source.fso",
+        "path": "./syntaxes/fso_table_language.tmLanguage.json",
+        "embeddedLanguages": {
+            "meta.embedded.lua.fso": "lua"
+        }
+      }
+    ],
+    "configurationDefaults": {
+      "editor.tokenColorCustomizations": {
+        "textMateRules": [
+          {
+            "scope": "type.section.fso",
+            "settings": {
+              "foreground": "#d36969"
+            }
+          },
+          {
+            "scope": "flag.name",
+            "settings": {
+              "foreground": "#6093b1"
+            }
+          },
+          {
+            "scope": "flag.parent",
+            "settings": {
+              "foreground": "#38a59c"
+            }
+          },
+          {
+            "scope": "flag.child",
+            "settings": {
+              "foreground": "#8c9636"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

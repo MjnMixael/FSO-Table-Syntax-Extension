@@ -1,0 +1,71 @@
+{
+    "scopeName": "source.fso",
+    "name": "FSO Table Language",
+    "fileTypes": [
+        "tbl",
+        "tbm",
+        "fc2",
+        "fs2"
+    ],
+    "patterns": [
+        {
+            "name": "meta.embedded.lua.fso",
+            "begin": "^(?i)(\\s*)\\$(.*?):\\s*\\[",
+            "beginCaptures": {
+                "0": { "name": "flag.parent.fso" }
+            },
+            "end": "^\\s*\\]",
+            "patterns": [
+                {
+                    "include": "source.lua"
+                }
+            ]
+        },
+        {
+            "name": "type.section.fso",
+            "match": "^(\\s*)#.*"
+        },
+        {
+            "name": "flag.name.fso",
+            "match": "^(?i)(\\s*)\\$name:.*?(?=\\s*;|$)"
+        },
+        {
+            "name": "flag.child.fso",
+            "match": "^(?i)(\\s*)\\+(.*?)(?::|$)"
+        },
+        {
+            "name": "flag.child.laser.fso",
+            "match": "^(?i)(\\s*)@laser[^:]*:"
+        },
+        {
+            "name": "flag.parent.fso",
+            "match": "^(?!\\s*;)(\\s*)\\$(.*?)(?::|$)"
+        },
+        {
+            "name": "comment.line.double-dash.fso",
+            "match": ";.*"
+        },
+        {
+            "name": "constant.language.fso",
+            "match": "\\b(?i)(NO|FALSE|YES|TRUE)\\b"
+        },
+        {
+            "name": "support.function.xstr.fso",
+            "match": "\\bXSTR\\b"
+        },
+        {
+            "name": "string.quoted.double.fso",
+            "match": "\"[^\"]*\""
+        },
+        {
+            "name": "keyword.operator.fso",
+            "match": "[=<>!]+"
+        },
+        {
+            "name": "punctuation.separator.fso",
+            "match": "[.,;:]"
+        }
+    ],
+    "repository": {},
+    "uuid": "fso-table-language"
+}
