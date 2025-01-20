@@ -3,6 +3,7 @@
   "displayName": "FreespaceOpen Table Syntax",
   "description": "Syntax highlighting for FreespaceOpen table and mission files",
   "version": "1.0.0",
+  "publisher": "MikeNelson",
   "repository" : {
     "type" : "git",
     "url" : "https://github.com/MjnMixael/FSO-Table-Syntax-Extension"
