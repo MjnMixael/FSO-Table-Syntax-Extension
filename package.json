@@ -8,6 +8,7 @@
     "type" : "git",
     "url" : "https://github.com/MjnMixael/FSO-Table-Syntax-Extension"
   },
+  "icon": "resources/extension_icon.png",
   "engines": {
     "vscode": "^1.96.0"
   },
